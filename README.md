@@ -1,10 +1,51 @@
-# [Snake (Python)](https://youtu.be/FtqWCo1_I4g)
+# Snake Game
 
-How to code a snake game in Python for beginners! Learn how to create a game of snake in Python using tkinter graphics library. Throughout the tutorial, you will learn how to create a graphical user interface (GUI) to display the Snake game, create the game loop, listen for Key presses to move the snake, use a list to store the snake's segments, and check collision and out of bounds for game over.
+This is a simple implementation of the classic Snake game using Python's Tkinter library, based on a tutorial from a YouTube video.
 
-[How to setup Python with Visual Studio Code](https://youtu.be/BB0gZFpukJU)
+## How to Play
 
-![snake-python-demo](https://github.com/ImKennyYip/snake-python/assets/78777681/7b168113-6c25-48fd-b033-e4ca1a5ba4a6)
+- Use the arrow keys to control the direction of the snake:
+  - Up: Move up
+  - Down: Move down
+  - Left: Move left
+  - Right: Move right
+- The goal is to eat the red food to grow the snake and increase your score.
+- The game is over if the snake runs into the walls or itself.
 
-## Homework:
-You can continue working on this project if you like. One feature you can add is a keyListener in change_direction to restart the game every time there is a game over. ex) if (e.keysym == "space" and gameOver). Inside this conditional statement, you should reset the game to default (clear snake_body, set velocityX, velocityY, score to 0, etc). Another feature you can add after this is keep track of the high score and paint it below the current score. For this you will need a variable to keep track of high score.
+## Installation
+
+1. Make sure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
+2. Tkinter should be included with Python, but if it's not, you can install it using the following command:
+   ```bash
+   pip install tk
+   ```
+3. Download or clone this repository.
+
+## Running the Game
+
+Navigate to the directory where the game script is located and run the following command:
+```bash
+python Snake.py
+```
+
+## Code Overview
+
+- `Tile` class: Represents a single tile in the game, used for both the snake and the food.
+- The game window is created using Tkinter and centered on the screen.
+- The `change_direction` function handles the direction change based on the user's key presses.
+- The `move` function updates the position of the snake and checks for collisions.
+- The `draw` function draws the snake and the food on the canvas and handles the game over scenario.
+
+## Future Improvements
+
+- Add levels with increasing difficulty.
+- Add a high score feature.
+- Implement different types of food with different effects.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- This game is inspired by the classic Snake game.
